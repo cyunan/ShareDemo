@@ -1,0 +1,3 @@
+签名文件:com.global.tdslg.jks
+别名:tdslg
+密码:android
