@@ -25,6 +25,7 @@
 package com.cyn.sharedemo.vk
 
 import android.net.Uri
+import android.util.Log
 import com.vk.api.sdk.VKApiJSONResponseParser
 import com.vk.api.sdk.VKApiManager
 import com.vk.api.sdk.VKHttpPostCall
@@ -56,9 +57,11 @@ class VKWallPostCommand(private val message: String? = null,
 
         if (photos.isNotEmpty()) {
             val uploadInfo = getServerUploadInfo(manager)
+            Log.d("VKWallPostCommand", "uploadInfo: $uploadInfo")
             val attachments = photos.map { uploadPhoto(it, uploadInfo, manager) }
+            Log.d("VKWallPostCommand", "attachments: $attachments")
 
-            callBuilder.args("attachments", attachments.joinToString(","))
+//            callBuilder.args("attachments", attachments.joinToString(","))
         }
 
         return manager.execute(callBuilder.build(), ResponseApiParser())

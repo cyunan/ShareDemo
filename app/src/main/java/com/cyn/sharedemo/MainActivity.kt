@@ -12,6 +12,7 @@ import com.cyn.sharedemo.share.VkShare
 import com.kakao.sdk.template.model.Content
 import com.kakao.sdk.template.model.FeedTemplate
 import com.kakao.sdk.template.model.Link
+import com.navercorp.nng.android.sdk.NNGLink
 import com.vk.api.sdk.VK
 import com.vk.api.sdk.auth.VKAuthenticationResult
 import com.vk.api.sdk.auth.VKScope
@@ -27,6 +28,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var CLIEND_ID = "UKvNABLDsyEJusJGsXL2"
+        var CLIENT_SECRET = "rK4suc_Qd0"
+        var LOUNGE_ID = "naver_game_4developer"
+        NNGLink.initModule(this,
+            LOUNGE_ID,
+            CLIEND_ID,
+            CLIENT_SECRET
+        )
         findViewById<Button>(R.id.btn_kakao_share).setOnClickListener { kakaoShare() }
         findViewById<Button>(R.id.btn_naver_share).setOnClickListener { naverShare() }
         findViewById<Button>(R.id.btn_VK_share).setOnClickListener { vkShare() }

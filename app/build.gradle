@@ -68,4 +68,6 @@ dependencies {
     implementation "com.vk:android-sdk-api:4.1.0"
 
     implementation fileTree(dir: 'libs', include: ['tweet-composer-*.aar', 'twitter-core-*.aar', 'twitter-text-*.jar'])
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
 }

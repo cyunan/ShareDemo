@@ -79,8 +79,8 @@ object VkShare {
         if (requestCode == IMAGE_REQ_CODE) {
             if (resultCode == Activity.RESULT_OK && data != null && data.data != null) {
                 Log.i(TAG, "onActivityResult: ${data.data}")
-                share("分享图片", data.data!!)
-//                share(activity, data.data!!)
+//                share("分享图片", data.data!!)
+                share(activity, data.data!!)
             } else {
                 share(activity)
             }

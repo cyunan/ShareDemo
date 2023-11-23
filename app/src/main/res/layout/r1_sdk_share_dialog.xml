@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/r1_transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_container"
+        android:layout_width="@dimen/g1_dp_330"
+        android:layout_height="wrap_content"
+        android:background="@drawable/g1_sdk_login_content_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/g1_dp_5"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/g1_sdk_page_bg_color_config"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_sdk_top_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/g1_sdk_login_register_bg" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/fl_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/g1_dp_30"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+            <ImageView
+                android:background="@android:color/background_dark"
+                android:layout_width="@dimen/g1_dp_100"
+                android:layout_height="@dimen/g1_dp_50" />
+            <ImageView
+                android:background="@android:color/background_dark"
+                android:layout_width="@dimen/g1_dp_100"
+                android:layout_height="@dimen/g1_dp_50" />
+            <ImageView
+                android:background="@android:color/background_dark"
+                android:layout_width="@dimen/g1_dp_100"
+                android:layout_height="@dimen/g1_dp_50" />
+            <ImageView
+                android:background="@android:color/background_dark"
+                android:layout_width="@dimen/g1_dp_100"
+                android:layout_height="@dimen/g1_dp_50" />
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:background="@android:color/background_dark"
+                android:layout_width="@dimen/g1_dp_100"
+                android:layout_height="@dimen/g1_dp_50" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
